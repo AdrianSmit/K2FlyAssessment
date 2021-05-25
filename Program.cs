@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BenchmarkDotNet.Running;
+using K2FlyAssessment.Benchmark;
+using System;
 
 namespace K2FlyAssessment
 {
@@ -6,7 +8,8 @@ namespace K2FlyAssessment
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Run Benchmarks prior to running the application.
+            BenchmarkRunner.Run<ParserBenchmark>();
         }
     }
 }
