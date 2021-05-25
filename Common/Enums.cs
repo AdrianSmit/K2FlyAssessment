@@ -15,5 +15,17 @@ namespace K2FlyAssessment.Common
             CLOSING,
             CLOSED
         }
+
+        public enum SunState
+        {
+            SUNRISE,
+            SUNSET
+        }
+
+        public enum BirdState
+        {
+            SLEEPING,
+            AWAKE
+        }
     }
 }

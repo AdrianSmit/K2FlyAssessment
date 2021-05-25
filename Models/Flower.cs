@@ -12,5 +12,6 @@ namespace K2FlyAssessment.Models
     {
         public FlowerState flowerState { get; set; }
         public Color color { get; set; }
+        public DateTime openingTime { get; set; }
     }
 }
