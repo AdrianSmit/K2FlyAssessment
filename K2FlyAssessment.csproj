@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.13.0" />
   </ItemGroup>
 
