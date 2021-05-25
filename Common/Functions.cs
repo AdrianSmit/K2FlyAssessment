@@ -27,6 +27,15 @@ namespace K2FlyAssessment.Common
 
         public Functions()
         {
+            sunUp = DateTime.Parse(sunUpAsString);
+
+            sunDown = DateTime.Parse(sunDownAsString);
+
+            StartUp();
+        }
+
+        public void StartUp()
+        {
             // Setup Flowers
             for (int i = 0; i > 3; i++)
             {
@@ -49,10 +58,6 @@ namespace K2FlyAssessment.Common
             }
 
         startUp:
-
-            sunUp = DateTime.Parse(sunUpAsString);
-
-            sunDown = DateTime.Parse(sunDownAsString);
 
             if (DateTime.Now == sunUp.AddHours(-1))
                 WakeBirds();

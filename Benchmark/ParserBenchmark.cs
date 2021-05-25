@@ -17,9 +17,9 @@ namespace K2FlyAssessment.Benchmark
         private static readonly Functions functions = new Functions();
 
         [Benchmark]
-        public void RotateSun()
+        public void StartUp()
         {
-            functions.RotateSun();
+            functions.StartUp();
         }
     }
 }
