@@ -10,6 +10,6 @@ namespace K2FlyAssessment.Models
     public partial class Bird
     {
         public BirdState birdState { get; set; }
-        public List<Flower> flower { get; set; }
+        public List<Flower> flowers { get; set; }
     }
 }

@@ -43,7 +43,7 @@ namespace K2FlyAssessment.Common
             {
                 birds.Add(i, new Bird
                 {
-                    flower = null,
+                    flowers = new(),
                     birdState = BirdState.SLEEPING
                 });
             }
@@ -64,8 +64,7 @@ namespace K2FlyAssessment.Common
 
             while (sun.sunState == SunState.SUNRISE)
             {
-                // Start visiting flowers
-
+                VistFlowers();
 
                 if (DateTime.Now >= sunDown)
                     sun.sunState = SunState.SUNSET;
@@ -145,7 +144,24 @@ namespace K2FlyAssessment.Common
 
             for (int i = 0; i < birds.Count; i++)
             {
+                for (int y = 0; y < flowers.Count; y++)
+                {
+                    if (birds[i].flowers.Count == 0)
+                        birds[i].flowers.Add(flowers[i]);
 
+                    for (int x = 0; x < birds[i].flowers.Count; x++)
+                    {
+                        if (birds[i].flowers[x].color == birds[i].flowers[x + 1].color)
+                        {
+                            flowers.Add(new Flower
+                            {
+                                flowerState = FlowerState.CLOSED,
+                                color = birds[i].flowers[x].color,
+                                openingTime = DateTime.Now.Add(2)
+                            });
+                        }
+                    }
+                }
             }
         }
     }
