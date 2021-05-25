@@ -153,11 +153,11 @@ namespace K2FlyAssessment.Common
                     {
                         if (birds[i].flowers[x].color == birds[i].flowers[x + 1].color)
                         {
-                            flowers.Add(new Flower
+                            flowers.Add(flowers.Count + 1, new Flower
                             {
                                 flowerState = FlowerState.CLOSED,
                                 color = birds[i].flowers[x].color,
-                                openingTime = DateTime.Now.Add(2)
+                                openingTime = DateTime.Now.AddHours(2)
                             });
                         }
                     }
